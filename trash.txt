@@ -1,0 +1,35 @@
+/ require('dotenv').config;
+mongoose.connect('mongodb://127.0.0.1:27017', {useNewUrlParser: true, useUnifiedTopology: true})
+.then(()=>{
+    console.log('CONNECTION OPEN!!!!')
+})
+.catch(err=>{
+    console.log('OH NO ERROR!!!')
+    console.log(err);
+})
+
+const PersonSchema = new mongoose.Schema({
+    name
+})
+// const connect = async () => {
+//     try {
+//         console.log('Connection works!!')
+//     } catch (error) {
+//         console.log("Unable to Connect!!");
+//         console.log(error);
+//     }}
+
+// dbConnect = async () => {
+//     try {
+//     await mongoose.connect(process.env.DB_URL, {
+//         useNewUrlParser: true,
+//         useUnifiedTopology: true,
+//     });
+//     console.log("connect is okkkk!");
+//     } catch (error) {
+//     console.log("Unable to Connect!!");
+//     console.log(error);
+//     }
+// };
+
+// Create a person with this prototype
